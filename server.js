@@ -14,7 +14,7 @@ app.use("/api/orders/", orderRoute);
 //in the production environment
 if (process.env.NODE_ENV === "production") {
   //first tell the compiler what is the static point
-  app.use(express.static("shopAKM-client/build"));
+  app.use(express.static("client/build"));
   //in the static folder what is the static point-index.html
   app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "client/build/index.html"));
