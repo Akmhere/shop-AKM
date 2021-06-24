@@ -1,0 +1,3 @@
+[submodule "shopAKM-client"]
+	path = shopAKM-client
+	url = https://github.com/Akmhere/shopAKM-client
