@@ -23,6 +23,10 @@ export default function Checkout({ amount }) {
       {loading && <Loader />}
       {success && <Success success="Your Order Placed Successfully" />}
       {error && <Error error="Something Went wrong" />}
+      <p className="text-center">
+        For testing purposes please fill the card number as 4242 4242 4242
+        4242.For MM/YY and CVC you can put any number.
+      </p>
       <StripeCheckout
         token={tokenhandler}
         stripeKey="pk_test_51J458dSEAa2AmUQa2umsm6BTIdzY80MWhxnc622UIIoP1bzQZumd2KXUwo43mF1wbKj5BSfk4w2O7d26ifxqQaVq00BqRnhAAW"
