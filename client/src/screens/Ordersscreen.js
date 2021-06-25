@@ -41,6 +41,7 @@ export default function Ordersscreen() {
                 orders.map((order) => {
                   return (
                     <tr
+                      style={{ cursor: "pointer" }}
                       onClick={() => {
                         window.location = `/orderinfo/${order._id}`;
                       }}
