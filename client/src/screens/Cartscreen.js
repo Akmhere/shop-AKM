@@ -7,7 +7,7 @@ export default function Cartscreen() {
   const cartreducerstate = useSelector((state) => state.cartReducer);
   const dispatch = useDispatch();
   const { cartItems } = cartreducerstate;
-
+  console.log(cartItems.length + "cartitem length");
   var subtotal = cartItems.reduce(
     (acc, item) => acc + item.price * item.quantity,
     0
@@ -68,7 +68,7 @@ export default function Cartscreen() {
           <h2 className="text-center">SubTotal : {subtotal} RS/-</h2>
 
           <hr />
-          <Checkout amount={subtotal} />
+          {cartItems.length !== 0 && <Checkout amount={subtotal} />}
         </div>
       </div>
     </div>

@@ -45,7 +45,7 @@ export const filterProducts = (searchKey, sortKey, category) => (dispatch) => {
 
       if (searchKey) {
         filteredproducts = res.data.filter((product) => {
-          return product.name.toLowerCase().includes(searchKey);
+          return product.name.toLowerCase().includes(searchKey.toLowerCase());
         });
       }
       //htl is high to low
